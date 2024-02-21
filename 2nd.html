@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <link rel="stylesheet" href="style/style2.css">
+  <link rel="icon" href="Photos/3 icon.svg">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <img src="Photos/2.png" alt="#" class="title">
+    <form action="">
+      <div class="form-group">
+        <input class="same" type="text" placeholder="Enter Your Name" id="name" required autocomplete="off">
+      </div>
+      <div class="form-group group2" style="flex-direction: row; ">
+        <label for="dob">DOB</label>
+        <input class="same cal" type="date" id="dob" required>
+      </div>
+      <div class="form-group">
+        <input class="same" type="email" id="email" placeholder="Enter Your Email" required autocomplete="off">
+      </div>
+      <div class="form-group group2">
+        <label for="smoke">Smoking</label>
+        <select class="same" name="Smoking" id="smoke">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="form-group group2">
+        <label for="drink">Drinking</label>
+        <select class="same" name="Drinking" id="drink">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="form-group btn">
+        <button class="subbtn" type="submit">
+          <img src="./Photos/cal2.png">
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="spinner-Container"> 
+    <div>
+      <span class="spinner-border text-muted"></span>
+    </div>
+  </div>
+  <script src="js/2nd.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../Photos/heaven.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'Phantom';
+  src: url("../Font/Phantom\ Fingers.ttf");
+}
+
+@font-face {
+  font-family: 'Nosifer';
+  src: url("../Font/Nosifer-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Eater';
+  src: url("../Font/Eater-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Boogaloo';
+  src: url("../Font/Boogaloo-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Grestal';
+  src: url("../Font/GrestalScriptDemoRegular-dBYX.ttf");
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.det-container {
+  width: 500px;
+  height: 550px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.778);
+  backdrop-filter: blur(3px);
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+}
+
+.Xbtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 8px 10px;
+  border-radius: 50%;
+  border: 1px solid red;
+  font-family: Phantom;
+  background-color: rgba(0, 0, 0, 0.778);
+  backdrop-filter: blur(3px);
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  transition: all 0.2s ease-in-out;
+}
+
+
+@media screen and (max-width: 680px) {
+  .Homebtn {
+    display: none !important;
+  }
+
+  .Xbtn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .det-container {
+    height: auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 465px) {
+  .det-container {
+    height: auto;
+    width: 90%;
+    padding: 0 10px 10px 10px;
+  }
+}
+
+
+h1 {
+  color: red;
+  text-transform: uppercase;
+  font-family: Eater;
+}
+
+.msg {
+  color: red;
+  text-transform: uppercase;
+  font-family: Nosifer;
+  font-size: 22px;
+}
+
+.mainmsg {
+  color: red;
+  font-family: Eater;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.details,
+.destdet {
+  color: white;
+  font-size: 22px;
+  font-family: Eater;
+  text-transform: uppercase;
+}
+
+.destdet {
+  font-size: 24px;
+}
+
+.second {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.third {
+  height: 60px;
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: Nosifer;
+}
+
+.fourth {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.duration {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  width: 100%;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.one {
+  font-family: Eater;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 18px;
+  width: 200px;
+  text-align: right;
+}
+
+.two {
+  font-family: Nosifer;
+  color: white;
+  width: auto;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.Homebtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  border: 1px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: Phantom;
+  background-color: rgba(0, 0, 0, 0.778);
+  /* background: transparent; */
+  backdrop-filter: blur(3px);
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  height: 50px;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.Homebtn:hover {
+  transform: scale(1.1);
+}
+
+.spinner-Container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.778);
+  backdrop-filter: blur(3px);
+  transition: all 0.5s ease-in-out;
+  display: none;
+  z-index: 1000;
+}
+
+.spinner-Container div {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

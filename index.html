@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Death Calculator</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" href="Photos/1 icon.png">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <center>
+    <img src="Photos/1.png" alt="#" class="title">
+  </center>
+  <div class="con">
+    <button class="startbtn">
+      <img src="Photos/start.png" alt="#" class="start">  
+    </button>  
+  </div>
+  <div class="spinner-Container"> 
+    <div>
+      <span class="spinner-border text-muted"></span>
+    </div>
+  </div>
+
+
+  <script>
+    let spinContainer = document.querySelector('.spinner-Container');
+
+    document.querySelector(".start").addEventListener("click",(event) =>{
+      event.preventDefault();
+      spinContainer.style.display = 'block';
+      setTimeout(function(){
+        window.location.href = "2nd.html";
+      },1500);
+    });
+  </script>
+</body>
+</html>
