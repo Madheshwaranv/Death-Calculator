@@ -151,6 +151,8 @@ let hourLeft = calculateHour();
 let minutesLeft = calculateMinutes();
 let secondsLeft = calculateSeconds();
 let msg2 = `You Have ${yearLeft} Years. ${deathMonth - currentMonth > 0 ? deathMonth - currentMonth : (deathMonth - currentMonth)+1} Months And ${deathDay - currentDate > 0 ? deathDay - currentDate : (deathDay - currentDate)*(-1)} Days Left To Live`;
+let screenWidth = window.innerWidth;
+console.log(screenWidth);
 
 //DOM Manipulation
 
@@ -187,16 +189,18 @@ if (destini === 'Heaven') {
   document.body.style.backgroundImage = 'url('+imagpath+')';
   head.style.color = 'rgb(43, 163, 211)';
   head.style.fontFamily = 'Boogaloo';
-  head.style.margin = '10px 0';
+  head.style.margin = screenWidth > 399 ? '10px 0': '10px 0 0 0' ;
   message.style.color = 'rgb(43, 163, 211)';
   message.style.fontFamily = 'Grestal';
-  message.style.fontSize = '25px';
+  message.style.fontSize = screenWidth > 640 ? '25px': ( screenWidth > 399 ?'22px':'19px');
+  message.style.marginBottom = screenWidth > 399 ? '10px': '0px';
 
-  document.querySelector('.fourth').style.marginTop = '13px';
+  document.querySelector('.fourth').style.marginTop = screenWidth > 399 ? '13px': '0px';
 
   main.forEach(main => {
     main.style.color = 'rgb(43, 163, 211)';
     main.style.fontFamily = 'Boogaloo';
+    main.style.fontSize = screenWidth > 640 ? '30px' : ( screenWidth > 399 ? '25px': '22px');
   })
  
   duration.forEach(duration => {
@@ -205,26 +209,26 @@ if (destini === 'Heaven') {
 
   destiniVar.forEach(destiniVar => {
     destiniVar.style.fontFamily = 'Boogaloo';
-    destiniVar.style.fontSize = '25px';
+    destiniVar.style.fontSize = screenWidth > 640 ? '25px' :( screenWidth > 399 ? '22px':'19px');
     destiniVar.style.color = 'white';
   })
  
   details.forEach(details => {
     details.style.fontFamily = 'Boogaloo';
-    details.style.fontSize = '25px';
+    details.style.fontSize = screenWidth > 640 ? '25px' : ( screenWidth > 399 ? '22px': '19px');
   })
  
-  leftMsg.style.fontSize = '25px';
+  leftMsg.style.fontSize = screenWidth > 640 ? '25px' : ( screenWidth > 399 ? '22px':'19px');
   leftMsg.style.fontFamily = 'Grestal';
-  leftMsg.style.marginBottom = '10px';
+  leftMsg.style.marginBottom = screenWidth > 399 ? '10px': '0px';
  
   one.forEach(one => {
     one.style.color = 'rgb(43, 163, 211)';
     one.style.fontFamily = 'Boogaloo';
-    one.style.fontSize = '25px';
+    one.style.fontSize = screenWidth > 640 ? '25px' : ( screenWidth > 399 ? '22px':'19px');
   })
   two.forEach(two => {
-    two.style.fontSize = '24px';
+    two.style.fontSize = screenWidth > 640 ? '24px': ( screenWidth > 399 ?'21px':'18px');
     two.style.fontFamily = 'Grestal';
   })
   homebtn.style.color = 'rgb(43, 163, 211)';
@@ -243,37 +247,37 @@ else{
   head.style.fontFamily = 'Eater';
   message.style.color = 'red';
   message.style.fontFamily = 'Nosifer';
-  message.style.fontSize = '22px';
+  message.style.fontSize = screenWidth > 399 ? '18px':'12px';
 
   main.forEach(main => {
     main.style.color = 'red';
     main.style.fontFamily = 'Eater';
-    main.style.fontSize = '30px';
+    main.style.fontSize = screenWidth > 399 ? '30px':'22px';
   })
  
   destiniVar.forEach(destiniVar => {
     destiniVar.style.fontFamily = 'Eater';
-    destiniVar.style.fontSize = '24px';
+    destiniVar.style.fontSize = screenWidth > 399 ? '24px' : '18px';
     destiniVar.style.color = 'white';
   })
  
   details.forEach(details => {
     details.style.fontFamily = 'Eater';
-    details.style.fontSize = '22px';
+    details.style.fontSize = screenWidth > 399 ? '22px': '16px' ;
     details.style.color = 'white';
   })
  
-  leftMsg.style.fontSize = '15px';
+  leftMsg.style.fontSize = screenWidth > 399 ? '15px' : '10px';
   leftMsg.style.fontFamily = 'Nosifer';
-  leftMsg.style.color = 'white';
- 
+  leftMsg.style.color = 'white'; 
+
   one.forEach(one => {
     one.style.color = 'red';
     one.style.fontFamily = 'Eater';
-    one.style.fontSize = '18px';
+    one.style.fontSize = screenWidth > 399 ? '18px' : '12px';
   })
   two.forEach(two => {
-    two.style.fontSize = '15px';
+    two.style.fontSize = screenWidth > 399 ? '15px': '10px';
     two.style.fontFamily = 'Nosifer';
     two.style.color = 'white';
   })
@@ -293,19 +297,11 @@ let home = () => {
 
   setTimeout(function(){
     window.location.href = './index.html';
+    spinContainer.style.display = 'none';
   },1500);
 }
 
-
 document.getElementById('home').addEventListener('click', home);
 document.getElementById('Homebtn').addEventListener('click', home);
-
-
-
-
-
-
-
-
 
 console.timeEnd("Timer")
