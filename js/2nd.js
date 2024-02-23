@@ -25,5 +25,6 @@ form.addEventListener("submit", (event) => {
   spinContainer.style.display = 'block';
   setTimeout(function(){
     window.location.href = "3rd.html";
+    spinContainer.style.display = 'none';
   },1500);
 });
